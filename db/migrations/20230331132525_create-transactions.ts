@@ -7,7 +7,7 @@ export async function up(knex: Knex): Promise<void> {
     table.decimal('amount', 10, 2).notNullable()
     table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable()
 
-    //timestamp => anote a data que cada registro foi criado
+    //timestamp => anota a data que cada registro foi criado
     //notNullable => não pode ficar vazio
   })
 }
