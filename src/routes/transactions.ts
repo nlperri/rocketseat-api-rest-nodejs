@@ -4,8 +4,15 @@ import { z } from 'zod'
 import crypto, { randomUUID } from 'node:crypto'
 import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
 
-// Cookies => Formas de manter contexto entre requisições
-//
+// cookies => formas de manter contexto entre requisições
+
+//Testes:
+
+//unitários => testa exclusivamente uma unidade da sua aplicação (uma parte de forma totalmente isolada)
+
+//integração => testa a comunicação entre duas ou mais unidades
+
+//e2e (end to end) => simula um usuário operando na nossa aplicação (prós: não dependem de nenhuma tecnologia, não dependem de arquitetura; contras: não são muito performáticos)
 
 export async function transactionsRoutes(app: FastifyInstance) {
   app.get(
